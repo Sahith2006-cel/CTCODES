@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int findMax(int a, int b, int c) {
+int max_of_three(int a, int b, int c) {
     if (a >= b && a >= c) {
         return a;
     } else if (b >= a && b >= c) {
@@ -11,7 +11,10 @@ int findMax(int a, int b, int c) {
 }
 
 int main() {
-    int a = 10, b = 20, c = 30;
-    printf("Maximum: %d\n", findMax(a, b, c));
+    int a,b,c ;
+printf("Enter three numbers:");
+scanf("%d%d%d",&a,&b,&c);    
+    printf("Maximum of %d, %d, and %d is %d\n", a, b, c, max_of_three(a, b, c));
+    
     return 0;
 }
